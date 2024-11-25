@@ -9,6 +9,7 @@ import CoverageOptions from "./pages/CoverageOptions";
 import EnrollmentHelp from "./pages/EnrollmentHelp";
 import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/enrollment-help" element={<EnrollmentHelp />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

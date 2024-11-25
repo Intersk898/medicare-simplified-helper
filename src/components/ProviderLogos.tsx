@@ -9,44 +9,24 @@ import Autoplay from "embla-carousel-autoplay";
 
 const providers = [
   {
-    name: "Anthem Health Insurance",
-    logo: "/wp-content/uploads/2024/04/Anthem-Health-Insurance.png"
-  },
-  {
-    name: "L.A. Care Health Plan",
-    logo: "/wp-content/uploads/2024/04/L.A.-Care-Health-Plan.png"
-  },
-  {
-    name: "Blue California",
-    logo: "/wp-content/uploads/2024/04/Blue-California-logo.png"
-  },
-  {
-    name: "Brand New Day",
-    logo: "/wp-content/uploads/2024/04/Brand-New-Day-logo.png"
-  },
-  {
-    name: "Central Health Medicare Plan",
-    logo: "/wp-content/uploads/2024/04/Central-Health-Medicare-Plan.png"
-  },
-  {
-    name: "Covered California",
-    logo: "/wp-content/uploads/2024/04/Covered-California-Logo.png"
-  },
-  {
     name: "SCAN Health Plan",
-    logo: "/wp-content/uploads/2024/04/SCAN-Health-Plan-logo.png"
+    logo: "/lovable-uploads/1d0a2002-900e-4cc5-9f01-daa5cbd5b59b.png"
   },
   {
     name: "United Healthcare",
-    logo: "/wp-content/uploads/2024/04/United-Healthcare.png"
+    logo: "/lovable-uploads/dc3a2b20-1649-4272-a6bf-84e40efba522.png"
   },
   {
     name: "Wellcare by Health Net",
-    logo: "/wp-content/uploads/2024/04/Wellcare-by-Health-Net.png"
+    logo: "/lovable-uploads/9272196e-cb93-48c5-b3bb-da3debe43db8.png"
   },
   {
     name: "Molina Healthcare",
-    logo: "/wp-content/uploads/2024/04/Molina-Healthcare.png"
+    logo: "/lovable-uploads/520f4dc2-4eb1-4a53-8fa7-caa2222fe4b8.png"
+  },
+  {
+    name: "Covered California",
+    logo: "/lovable-uploads/ebe70427-56b0-4643-8553-8cfa2206b6f8.png"
   }
 ];
 
