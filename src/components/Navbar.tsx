@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b transition-transform duration-300 ${
-      isVisible ? 'translate-y-0' : '-translate-y-full'
+      isVisible ? 'translate-y-[40px]' : '-translate-y-full'
     }`}>
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
