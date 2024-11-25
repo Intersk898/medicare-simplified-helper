@@ -30,21 +30,20 @@ const providers = [
 ];
 
 const ProviderLogos = () => {
-  const autoplay = Autoplay({
-    delay: 5000, // 5 seconds between transitions
+  const autoplayPlugin = Autoplay({
+    delay: 5000,
     stopOnInteraction: false,
     stopOnMouseEnter: false,
-    rootNode: (emblaRoot) => emblaRoot.parentElement,
   });
 
   const [emblaRef] = useEmblaCarousel(
-    { 
+    {
       loop: true,
-      speed: 10, // Smooth transition speed
+      dragFree: false,
       align: "center",
-      slidesToScroll: 1, // Move one image at a time
+      slidesToScroll: 1,
     },
-    [autoplay]
+    [autoplayPlugin]
   );
 
   return (
@@ -54,17 +53,13 @@ const ProviderLogos = () => {
           We offer a diverse range of plans from trusted healthcare providers:
         </h2>
         <div className="max-w-6xl mx-auto">
-          <Carousel
-            ref={emblaRef}
-            opts={{
-              align: "center",
-              loop: true,
-            }}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-2 md:-ml-4">
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex">
               {providers.map((provider, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/3">
+                <div 
+                  key={index} 
+                  className="flex-[0_0_33.33%] min-w-0 pl-4"
+                >
                   <div className="p-4 h-32 flex items-center justify-center">
                     <img
                       src={provider.logo}
@@ -72,10 +67,10 @@ const ProviderLogos = () => {
                       className="max-h-full max-w-full object-contain filter hover:brightness-110 transition-all duration-300"
                     />
                   </div>
-                </CarouselItem>
+                </div>
               ))}
-            </CarouselContent>
-          </Carousel>
+            </div>
+          </div>
         </div>
       </div>
     </section>
