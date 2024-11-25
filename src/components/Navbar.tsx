@@ -25,8 +25,12 @@ const Navbar = () => {
       isVisible ? 'translate-y-0' : '-translate-y-full'
     }`}>
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        <Link to="/" className="text-2xl font-bold text-primary transition-colors hover:text-primary/80">
-          MedicarePro
+        <Link to="/" className="flex items-center gap-2">
+          <img 
+            src="/lovable-uploads/330ec2eb-d0af-42bc-be0b-bbdbfb2fd6f1.png" 
+            alt="Azari Health Insurance Services" 
+            className="h-12 w-auto"
+          />
         </Link>
         <div className="hidden md:flex items-center gap-8">
           <Link to="/medicare-basics" className="hover:text-primary transition-all duration-300 hover:translate-y-[-2px]">

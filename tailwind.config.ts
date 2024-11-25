@@ -25,15 +25,15 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#0F52BA",
+          DEFAULT: "#008080", // Teal color
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#20B2AA",
+          DEFAULT: "#006666", // Darker teal
           foreground: "#FFFFFF",
         },
         accent: {
-          DEFAULT: "#FF7F50",
+          DEFAULT: "#00A3A3", // Lighter teal
           foreground: "#FFFFFF",
         },
         destructive: {
