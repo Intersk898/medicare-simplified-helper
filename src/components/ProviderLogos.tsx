@@ -9,24 +9,24 @@ import Autoplay from "embla-carousel-autoplay";
 
 const providers = [
   {
-    name: "SCAN Health Plan",
-    logo: "/lovable-uploads/1d0a2002-900e-4cc5-9f01-daa5cbd5b59b.png"
+    name: "Brand New Day",
+    logo: "/lovable-uploads/02110580-e1d8-4ef7-bdf2-8d18e4dcb7dd.png"
   },
   {
-    name: "United Healthcare",
-    logo: "/lovable-uploads/dc3a2b20-1649-4272-a6bf-84e40efba522.png"
+    name: "Anthem Health Insurance",
+    logo: "/lovable-uploads/fe9c323f-7736-4a1f-b445-0050482a01d8.png"
   },
   {
-    name: "Wellcare by Health Net",
-    logo: "/lovable-uploads/9272196e-cb93-48c5-b3bb-da3debe43db8.png"
+    name: "L.A. Care Health Plan",
+    logo: "/lovable-uploads/673f8996-7410-45d0-a5ef-9f3977b656d8.png"
   },
   {
-    name: "Molina Healthcare",
-    logo: "/lovable-uploads/520f4dc2-4eb1-4a53-8fa7-caa2222fe4b8.png"
+    name: "Blue California",
+    logo: "/lovable-uploads/eb1a4ba3-0f87-4309-8868-29d65e872217.png"
   },
   {
-    name: "Covered California",
-    logo: "/lovable-uploads/ebe70427-56b0-4643-8553-8cfa2206b6f8.png"
+    name: "Central Health Medicare Plan",
+    logo: "/lovable-uploads/75168212-b72f-40e0-8071-3870cef7975d.png"
   }
 ];
 
