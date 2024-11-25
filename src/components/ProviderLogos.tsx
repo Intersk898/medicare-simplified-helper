@@ -67,12 +67,13 @@ const ProviderLogos = () => {
   const [emblaRef] = useEmblaCarousel(
     { 
       loop: true,
-      dragFree: true,
-      align: "center",
+      dragFree: false,
+      align: "start",
+      slidesToScroll: 1,
     },
     isVisible ? [
       Autoplay({
-        delay: 2000, // Changed to 2 seconds
+        delay: 2000,
         stopOnInteraction: false,
         stopOnMouseEnter: false,
       })
@@ -89,7 +90,7 @@ const ProviderLogos = () => {
           <Carousel
             ref={emblaRef}
             opts={{
-              align: "center",
+              align: "start",
               loop: true,
             }}
             className="w-full"
