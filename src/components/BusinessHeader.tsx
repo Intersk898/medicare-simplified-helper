@@ -19,7 +19,7 @@ const BusinessHeader = () => {
   }, [lastScrollY]);
 
   return (
-    <div className={`fixed w-full bg-primary text-white text-sm py-2 z-[60] transform transition-transform ease-in-out duration-500 ${
+    <div className={`fixed w-full bg-primary text-white text-sm py-2 z-[60] transform transition-transform ease-in-out duration-700 ${
       isVisible ? 'translate-y-0' : '-translate-y-full'
     }`}>
       <div className="container mx-auto px-4 text-center">
