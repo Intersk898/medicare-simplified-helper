@@ -31,6 +31,8 @@ const Hero = () => {
                 type="text" 
                 placeholder="Enter ZIP code"
                 className="w-full text-lg"
+                maxLength={5}
+                pattern="[0-9]*"
               />
               <Button 
                 size="lg"
