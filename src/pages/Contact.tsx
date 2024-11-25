@@ -28,7 +28,7 @@ const Contact = () => {
                     <Phone className="w-6 h-6 text-primary" />
                     <div>
                       <h3 className="font-semibold">Phone</h3>
-                      <p className="text-gray-600">(555) 123-4567</p>
+                      <p className="text-gray-600">(213) 322-3542</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -48,7 +48,7 @@ const Contact = () => {
                     <Clock className="w-6 h-6 text-primary" />
                     <div>
                       <h3 className="font-semibold">Business Hours</h3>
-                      <p className="text-gray-600">Monday - Friday: 9:00 AM - 5:00 PM</p>
+                      <p className="text-gray-600">8 a.m. to 8 p.m. 7 days a week</p>
                     </div>
                   </CardContent>
                 </Card>
