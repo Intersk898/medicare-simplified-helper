@@ -30,6 +30,13 @@ const providers = [
 ];
 
 const ProviderLogos = () => {
+  const autoplay = Autoplay({
+    delay: 5000,
+    stopOnInteraction: false,
+    stopOnMouseEnter: false,
+    rootNode: (emblaRoot) => emblaRoot.parentElement,
+  });
+
   const [emblaRef] = useEmblaCarousel(
     { 
       loop: true,
@@ -37,14 +44,7 @@ const ProviderLogos = () => {
       align: "center",
       slidesToScroll: 1,
     },
-    [
-      Autoplay({
-        delay: 5000,
-        stopOnInteraction: true,
-        stopOnMouseEnter: false,
-        playOnInit: true
-      })
-    ]
+    [autoplay]
   );
 
   return (
