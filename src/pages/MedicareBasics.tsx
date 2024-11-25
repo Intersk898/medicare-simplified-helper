@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Contact from "@/components/Contact";
-import { Hospital, Heart, Stethoscope, Pills, FileText, Calendar } from "lucide-react";
+import { Hospital, Heart, Stethoscope, Pill, FileText, Calendar } from "lucide-react";
 
 const MedicareBasics = () => {
   return (
@@ -85,7 +85,7 @@ const MedicareBasics = () => {
             <Card className="hover:shadow-lg transition-all duration-300 animate-fade-up delay-300">
               <CardHeader className="flex flex-row items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Pills className="w-6 h-6 text-primary" />
+                  <Pill className="w-6 h-6 text-primary" />
                 </div>
                 <CardTitle>Part D: Prescription Drugs</CardTitle>
               </CardHeader>
