@@ -15,19 +15,19 @@ const Hero = () => {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
               <div className="flex items-center gap-3">
-                <Shield className="w-6 h-6 text-accent" />
+                <Shield className="w-6 h-6 text-secondary" />
                 <span>Certified Medicare Specialists</span>
               </div>
               <div className="flex items-center gap-3">
-                <Calendar className="w-6 h-6 text-accent" />
+                <Calendar className="w-6 h-6 text-secondary" />
                 <span>Complimentary Plan Review</span>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="w-6 h-6 text-accent" />
+                <Phone className="w-6 h-6 text-secondary" />
                 <span>Dedicated Support Team</span>
               </div>
               <div className="flex items-center gap-3">
-                <FileCheck className="w-6 h-6 text-accent" />
+                <FileCheck className="w-6 h-6 text-secondary" />
                 <span>Free Consultation</span>
               </div>
             </div>
@@ -43,9 +43,10 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-accent text-accent hover:bg-accent hover:text-primary transition-all duration-300 hover:translate-y-[-2px]"
+                className="border-white text-white hover:bg-white/0 hover:text-transparent transition-all duration-300"
               >
-                Schedule Consultation
+                <Phone className="mr-2 h-4 w-4" />
+                Call (213) 322-3542
               </Button>
             </div>
           </div>
