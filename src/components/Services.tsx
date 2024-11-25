@@ -28,12 +28,16 @@ const Services = () => {
   return (
     <section id="services" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">How I Can Help</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 animate-fade-up">How I Can Help</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service) => (
-            <Card key={service.title} className="hover:shadow-lg transition-shadow">
+          {services.map((service, index) => (
+            <Card 
+              key={service.title} 
+              className="hover:shadow-lg transition-all duration-300 hover:translate-y-[-4px] animate-fade-up"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
               <CardHeader>
-                <div className="mb-4 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <div className="mb-4 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center transition-transform duration-300 hover:scale-110">
                   <service.icon className="w-6 h-6 text-primary" />
                 </div>
                 <CardTitle>{service.title}</CardTitle>

@@ -12,10 +12,18 @@ const Hero = () => {
             Simplifying Medicare so you can focus on what matters most. Get personalized guidance for your healthcare journey.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" variant="default" className="bg-white text-primary hover:bg-white/90">
+            <Button 
+              size="lg" 
+              variant="default" 
+              className="bg-white text-primary hover:bg-white/90 transition-all duration-300 hover:translate-y-[-2px]"
+            >
               Compare Plans Now
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white text-white hover:bg-white/10 transition-all duration-300 hover:translate-y-[-2px]"
+            >
               Learn About Medicare
             </Button>
           </div>
