@@ -49,11 +49,11 @@ const Hero = () => {
               </Button>
             </div>
           </div>
-          <div className="hidden lg:block animate-fade-in">
+          <div className="hidden lg:block">
             <img
               src="/lovable-uploads/37f2b1e5-0c63-4919-a3a8-94bc8abc379b.png"
               alt="Active seniors enjoying Medicare benefits"
-              className="w-full h-auto rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300"
+              className="w-full h-auto rounded-lg shadow-lg opacity-90"
             />
           </div>
         </div>
