@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -31,19 +30,6 @@ const providers = [
 ];
 
 const ProviderLogos = () => {
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const handleVisibilityChange = () => {
-      setIsVisible(!document.hidden);
-    };
-
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-    return () => {
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-    };
-  }, []);
-
   const [emblaRef] = useEmblaCarousel(
     { 
       loop: true,
@@ -51,13 +37,13 @@ const ProviderLogos = () => {
       align: "start",
       slidesToScroll: 1,
     },
-    isVisible ? [
+    [
       Autoplay({
         delay: 2000,
         stopOnInteraction: false,
         stopOnMouseEnter: false,
       })
-    ] : []
+    ]
   );
 
   return (
