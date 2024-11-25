@@ -1,3 +1,5 @@
+import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+
 const Footer = () => {
   return (
     <footer className="border-t">
@@ -8,6 +10,20 @@ const Footer = () => {
             <p className="text-gray-600 text-sm">
               Your trusted Medicare insurance partner in California, helping you navigate your healthcare journey.
             </p>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-600 hover:text-primary transition-colors">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-600 hover:text-primary transition-colors">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-600 hover:text-primary transition-colors">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-600 hover:text-primary transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+            </div>
           </div>
           
           <div className="space-y-4">
@@ -39,14 +55,20 @@ const Footer = () => {
         </div>
         
         <div className="border-t pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm text-gray-600">
-              Copyright © {new Date().getFullYear()} Mazari Health. All rights reserved.
-            </p>
-            <div className="flex space-x-6 text-sm text-gray-600">
-              <a href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</a>
-              <a href="/terms" className="hover:text-primary transition-colors">Terms of Service</a>
-              <a href="/accessibility" className="hover:text-primary transition-colors">Accessibility</a>
+          <div className="flex flex-col space-y-4">
+            <div className="text-sm text-gray-600">
+              <p>California License #6010059 Mazari Health Insurance Services, LLC.</p>
+            </div>
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <p className="text-sm text-gray-600">
+                Copyright © {new Date().getFullYear()} Mazari Health. All rights reserved.
+              </p>
+              <div className="flex flex-wrap gap-4 text-sm text-gray-600">
+                <a href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</a>
+                <a href="/terms" className="hover:text-primary transition-colors">Terms of Service</a>
+                <a href="/report-fraud" className="hover:text-primary transition-colors">Report Suspected Fraud, Waste & Abuse</a>
+                <a href="/accessibility" className="hover:text-primary transition-colors">Accessibility</a>
+              </div>
             </div>
           </div>
         </div>
