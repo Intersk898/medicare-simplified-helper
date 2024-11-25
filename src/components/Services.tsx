@@ -3,23 +3,23 @@ import { Card, CardHeader, CardTitle, CardDescription } from "./ui/card";
 
 const services = [
   {
-    title: "Plan Comparisons",
-    description: "Compare Medicare plans side by side to find your perfect match",
+    title: "Personalized Plan Analysis",
+    description: "Expert comparison of Medicare options tailored to your healthcare needs",
     icon: Check,
   },
   {
-    title: "Enrollment Assistance",
-    description: "Get help navigating the enrollment process with ease",
+    title: "Simplified Enrollment",
+    description: "Streamlined process with step-by-step guidance and support",
     icon: Shield,
   },
   {
-    title: "Coverage Options",
-    description: "Understand all your Medicare coverage options clearly",
+    title: "Medicare Education",
+    description: "Clear explanations of benefits, coverage options, and important deadlines",
     icon: Calendar,
   },
   {
-    title: "Prescription Plans",
-    description: "Find the best prescription drug coverage for your needs",
+    title: "Prescription Coverage",
+    description: "Comprehensive analysis of drug plans to minimize your out-of-pocket costs",
     icon: Pill,
   },
 ];
@@ -28,7 +28,7 @@ const Services = () => {
   return (
     <section id="services" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 animate-fade-up">How We Can Help</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 animate-fade-up">Comprehensive Medicare Support</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <Card 
