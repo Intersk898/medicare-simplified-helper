@@ -3,12 +3,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Contact from "@/components/Contact";
 import { FileText, BookOpen, Calendar, Phone } from "lucide-react";
+import BusinessHeader from "@/components/BusinessHeader";
 
 const Resources = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <BusinessHeader />
       <Navbar />
-      <div className="pt-20 pb-16">
+      <div className="pt-28">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center mb-12">Medicare Resources</h1>
 

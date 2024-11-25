@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { Phone, Mail, Clock } from "lucide-react";
+import BusinessHeader from "@/components/BusinessHeader";
 
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
@@ -14,8 +15,9 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <BusinessHeader />
       <Navbar />
-      <div className="pt-20 pb-16">
+      <div className="pt-28">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center mb-12">Contact Us</h1>
 
