@@ -10,7 +10,7 @@ const Hero = () => {
             Find Your Perfect Medicare Plan in California
           </h1>
           <p className="text-xl mb-8 opacity-90">
-            Licensed insurance agents ready to help you navigate Medicare with confidence. Get personalized guidance and find the right coverage for your needs.
+            Our licensed insurance agents are ready to help you navigate Medicare with confidence. Get personalized guidance and find the right coverage for your needs.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div className="flex items-center gap-3">

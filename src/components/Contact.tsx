@@ -13,9 +13,9 @@ const Contact = () => {
     <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-xl mx-auto text-center animate-fade-up">
-          <h2 className="text-4xl font-bold mb-4">Let's Get Started!</h2>
+          <h2 className="text-4xl font-bold mb-4">Let's Get Started Together!</h2>
           <p className="text-gray-600 mb-8">
-            Schedule your free consultation today and get expert Medicare guidance. Call us at <a href="tel:2133223542" className="text-primary hover:underline">(213) 322-3542</a>
+            Schedule your free consultation today and get expert Medicare guidance from our team. Call us at <a href="tel:2133223542" className="text-primary hover:underline">(213) 322-3542</a>
           </p>
           <form onSubmit={handleSubmit} className="space-y-4">
             <Input 

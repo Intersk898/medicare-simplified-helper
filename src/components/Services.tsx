@@ -28,7 +28,7 @@ const Services = () => {
   return (
     <section id="services" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 animate-fade-up">How I Can Help</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 animate-fade-up">How We Can Help</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <Card 
