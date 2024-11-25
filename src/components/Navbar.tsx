@@ -21,8 +21,8 @@ const Navbar = () => {
   }, [lastScrollY]);
 
   return (
-    <nav className={`fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b transform transition-all duration-300 ${
-      isVisible ? 'top-10' : '-top-full'
+    <nav className={`fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b transform transition-transform ease-in-out duration-500 ${
+      isVisible ? 'translate-y-10' : '-translate-y-full'
     }`}>
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
