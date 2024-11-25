@@ -43,7 +43,7 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-white text-white hover:bg-white/0 hover:text-transparent transition-all duration-300"
+                className="border-white text-white hover:bg-white/10 transition-all duration-300"
               >
                 <Phone className="mr-2 h-4 w-4" />
                 Call (213) 322-3542
