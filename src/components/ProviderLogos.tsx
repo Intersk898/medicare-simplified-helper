@@ -31,7 +31,7 @@ const providers = [
 
 const ProviderLogos = () => {
   const autoplay = Autoplay({
-    delay: 5,
+    delay: 5000,
     stopOnInteraction: false,
     stopOnMouseEnter: false,
     rootNode: (emblaRoot) => emblaRoot.parentElement,
