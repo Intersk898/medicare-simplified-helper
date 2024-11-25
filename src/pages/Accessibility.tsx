@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import BusinessHeader from "@/components/BusinessHeader";
 
 const Accessibility = () => {
   return (
@@ -9,6 +10,7 @@ const Accessibility = () => {
         <title>Accessibility Statement | Mazari Health</title>
         <meta name="description" content="Learn about Mazari Health's commitment to digital accessibility and how we ensure our website is accessible to all users." />
       </Helmet>
+      <BusinessHeader />
       <Navbar />
       
       <main className="container mx-auto px-4 py-12 max-w-4xl mt-32">
