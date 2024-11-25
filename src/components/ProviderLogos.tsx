@@ -33,15 +33,16 @@ const ProviderLogos = () => {
   const [emblaRef] = useEmblaCarousel(
     { 
       loop: true,
-      dragFree: true,
+      dragFree: false,
       align: "center",
       slidesToScroll: 1,
     },
     [
       Autoplay({
         delay: 5000,
-        stopOnInteraction: false,
-        stopOnMouseEnter: true,
+        stopOnInteraction: true,
+        stopOnMouseEnter: false,
+        playOnInit: true
       })
     ]
   );
@@ -63,7 +64,7 @@ const ProviderLogos = () => {
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {providers.map((provider, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/3 transition-all duration-500">
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/3">
                   <div className="p-4 h-32 flex items-center justify-center">
                     <img
                       src={provider.logo}
