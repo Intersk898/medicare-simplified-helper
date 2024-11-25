@@ -13,7 +13,7 @@ const Accessibility = () => {
       <BusinessHeader />
       <Navbar />
       
-      <main className="container mx-auto px-4 py-12 max-w-4xl mt-32">
+      <main className="container mx-auto px-4 py-12 max-w-4xl pt-28">
         <h1 className="text-4xl font-bold text-primary mb-8">Accessibility Statement</h1>
         
         <div className="space-y-6 text-gray-700">
