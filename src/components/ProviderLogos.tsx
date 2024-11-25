@@ -31,7 +31,7 @@ const providers = [
 
 const ProviderLogos = () => {
   const autoplay = Autoplay({
-    delay: 5000,
+    delay: 5000, // 5 seconds between transitions
     stopOnInteraction: false,
     stopOnMouseEnter: false,
     rootNode: (emblaRoot) => emblaRoot.parentElement,
@@ -40,9 +40,9 @@ const ProviderLogos = () => {
   const [emblaRef] = useEmblaCarousel(
     { 
       loop: true,
-      dragFree: false,
+      speed: 10, // Smooth transition speed
       align: "center",
-      slidesToScroll: 1,
+      slidesToScroll: 1, // Move one image at a time
     },
     [autoplay]
   );
