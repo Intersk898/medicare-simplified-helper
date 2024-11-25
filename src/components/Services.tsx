@@ -1,4 +1,4 @@
-import { Check, Shield, Calendar, Pills } from "lucide-react";
+import { Check, Shield, Calendar, Pill } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription } from "./ui/card";
 
 const services = [
@@ -20,7 +20,7 @@ const services = [
   {
     title: "Prescription Plans",
     description: "Find the best prescription drug coverage for your needs",
-    icon: Pills,
+    icon: Pill,
   },
 ];
 
