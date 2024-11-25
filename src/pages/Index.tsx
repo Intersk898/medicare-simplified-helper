@@ -7,6 +7,7 @@ import Contact from "@/components/Contact";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
+import Footer from "@/components/Footer";
 import { Helmet } from "react-helmet";
 
 const Index = () => {
@@ -33,6 +34,7 @@ const Index = () => {
       <Reviews />
       <FAQ />
       <Contact />
+      <Footer />
     </div>
   );
 };
