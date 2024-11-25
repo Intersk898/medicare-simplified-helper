@@ -31,7 +31,7 @@ const providers = [
 
 const ProviderLogos = () => {
   const autoplayPlugin = Autoplay({
-    delay: 5000,
+    delay: 3000,
     stopOnInteraction: false,
     stopOnMouseEnter: false,
   });
