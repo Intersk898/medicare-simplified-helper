@@ -24,7 +24,7 @@ const Footer = () => {
             <h3 className="font-bold text-primary text-lg">Contact</h3>
             <ul className="space-y-2 text-sm text-gray-600">
               <li>Los Angeles, CA</li>
-              <li>Phone: (888) 123-4567</li>
+              <li>Phone: (213) 322-3542</li>
               <li>Email: info@mazarihealth.com</li>
             </ul>
           </div>
@@ -32,9 +32,8 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-bold text-primary text-lg">Hours</h3>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li>Monday - Friday: 8am - 6pm</li>
-              <li>Saturday: 9am - 2pm</li>
-              <li>Sunday: Closed</li>
+              <li>8 a.m. to 8 p.m.</li>
+              <li>7 days a week</li>
             </ul>
           </div>
         </div>
