@@ -8,35 +8,34 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
 
-// Simulated Google reviews data (in a real application, this would come from Google's API)
 const reviews = [
   {
     id: 1,
-    name: "Sarah Johnson",
+    name: "Yvonne Hernandez",
     rating: 5,
-    text: "Exceptional service! They made understanding Medicare so much easier. Highly recommend their expertise.",
-    date: "2 weeks ago"
-  },
-  {
-    id: 2,
-    name: "Michael Smith",
-    rating: 5,
-    text: "The team at Mazari Health went above and beyond to help me find the perfect Medicare plan. Their knowledge and patience made all the difference.",
-    date: "1 month ago"
-  },
-  {
-    id: 3,
-    name: "Patricia Brown",
-    rating: 5,
-    text: "I was overwhelmed with Medicare choices until I found Mazari Health. They simplified everything and found me great coverage.",
+    text: "Excellent service! Mazari Health Insurance Services helped me find the perfect Medicare plan. They were very knowledgeable and patient in explaining all my options.",
     date: "2 months ago"
   },
   {
-    id: 4,
-    name: "Robert Wilson",
+    id: 2,
+    name: "Margarita Gonzalez",
     rating: 5,
-    text: "Professional, knowledgeable, and caring. They took the time to understand my needs and found the best plan for my situation.",
+    text: "Very professional and helpful. They took their time to explain everything in detail. Highly recommend their services!",
+    date: "a month ago"
+  },
+  {
+    id: 3,
+    name: "Maria Sanchez",
+    rating: 5,
+    text: "Great experience with Mazari Health Insurance Services. They made the Medicare enrollment process very easy to understand.",
     date: "3 months ago"
+  },
+  {
+    id: 4,
+    name: "Jose Rodriguez",
+    rating: 5,
+    text: "Excellent customer service! They helped me find the best Medicare plan for my needs. Very knowledgeable and professional.",
+    date: "2 months ago"
   }
 ];
 

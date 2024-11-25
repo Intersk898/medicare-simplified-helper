@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import BusinessHeader from "./components/BusinessHeader";
 import Index from "./pages/Index";
 import MedicareBasics from "./pages/MedicareBasics";
 import CoverageOptions from "./pages/CoverageOptions";
@@ -16,6 +17,7 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
+      <BusinessHeader />
       <Toaster />
       <Sonner />
       <BrowserRouter>
