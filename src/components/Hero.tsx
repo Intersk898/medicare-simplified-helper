@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-2xl animate-fade-up">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Your Trusted Medicare Specialist Broker
+            Medicare Plans & Support | Mazari Health
           </h1>
           <p className="text-xl mb-8 opacity-90">
             Simplifying Medicare so you can focus on what matters most. Get personalized guidance for your healthcare journey.
