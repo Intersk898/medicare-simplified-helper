@@ -24,12 +24,6 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercentage = currentScrollY / maxScroll;
-      
-      const newOpacity = Math.max(0.3, 1 - scrollPercentage * 1.5);
-      setOpacity(newOpacity);
-
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsVisible(false);
       } else {
@@ -44,10 +38,9 @@ const Navbar = () => {
 
   return (
     <nav 
-      className={`fixed w-full bg-white z-50 transform transition-all duration-300 ${
-        isVisible ? 'translate-y-10' : '-translate-y-full'
-      }`}
-      style={{ opacity }}
+      className={`fixed w-full bg-white z-50 transform transition-transform duration-300 ${
+        isVisible ? 'translate-y-0' : '-translate-y-full'
+      } shadow-sm`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -56,20 +49,20 @@ const Navbar = () => {
             <img 
               src="/lovable-uploads/69e99ccc-4612-40c6-955d-c467b1e540b7.png" 
               alt="Mazari Health" 
-              className="h-10"
+              className="h-8"
             />
           </Link>
 
           {/* Navigation Links */}
-          <div className="flex items-center space-x-24">
-            {/* First Column */}
+          <div className="flex items-center space-x-16">
+            {/* Column 1 */}
             <div className="flex flex-col space-y-4">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button 
                     variant="ghost" 
                     size="sm" 
-                    className="gap-2 hover:bg-gray-100 bg-white text-sm font-medium px-3"
+                    className="gap-2 hover:bg-gray-100 bg-white text-sm font-medium"
                   >
                     <Globe className="w-4 h-4" />
                     {i18n.language === 'en' ? 'English' : 'Español'}
@@ -87,58 +80,58 @@ const Navbar = () => {
               </DropdownMenu>
               <Link 
                 to="/medicare-basics" 
-                className="text-sm font-medium hover:text-primary transition-colors px-3"
+                className="text-sm font-medium hover:text-primary transition-colors"
               >
                 {t('medicareBasics')}
               </Link>
             </div>
 
-            {/* Second Column */}
+            {/* Column 2 */}
             <div className="flex flex-col space-y-4">
               <Link 
                 to="/find-agent" 
-                className="text-sm font-medium hover:text-primary transition-colors px-3"
+                className="text-sm font-medium hover:text-primary transition-colors"
               >
                 {t('findAgent')}
               </Link>
               <Link 
                 to="/coverage-options" 
-                className="text-sm font-medium hover:text-primary transition-colors px-3"
+                className="text-sm font-medium hover:text-primary transition-colors"
               >
                 {t('coverageOptions')}
               </Link>
             </div>
 
-            {/* Third Column */}
+            {/* Column 3 */}
             <div className="flex flex-col space-y-4">
               <Link 
                 to="/careers" 
-                className="text-sm font-medium hover:text-primary transition-colors px-3"
+                className="text-sm font-medium hover:text-primary transition-colors"
               >
                 {t('careers')}
               </Link>
               <Link 
                 to="/enrollment-help" 
-                className="text-sm font-medium hover:text-primary transition-colors px-3"
+                className="text-sm font-medium hover:text-primary transition-colors"
               >
                 {t('enrollmentHelp')}
               </Link>
             </div>
 
-            {/* Fourth Column */}
+            {/* Column 4 */}
             <div className="flex flex-col space-y-4">
               <Link to="/contact">
                 <Button 
                   variant="default" 
                   size="sm" 
-                  className="bg-primary hover:bg-primary/90 text-sm font-medium px-4"
+                  className="bg-primary hover:bg-primary/90 text-sm font-medium"
                 >
                   {t('contactUs')}
                 </Button>
               </Link>
               <Link 
                 to="/resources" 
-                className="text-sm font-medium hover:text-primary transition-colors px-3"
+                className="text-sm font-medium hover:text-primary transition-colors"
               >
                 {t('resources')}
               </Link>
