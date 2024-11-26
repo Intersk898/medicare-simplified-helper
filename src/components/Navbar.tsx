@@ -1,7 +1,7 @@
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Globe, ChevronDown, Search } from "lucide-react";
+import { Globe, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import {
   DropdownMenu,
@@ -65,13 +65,13 @@ const Navbar = () => {
             <div className="flex items-center gap-4">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="sm" className="gap-2">
+                  <Button variant="ghost" size="sm" className="gap-2 hover:bg-gray-100">
                     <Globe className="w-4 h-4" />
                     {i18n.language === 'en' ? 'English' : 'Español'}
                     <ChevronDown className="w-4 h-4" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent>
+                <DropdownMenuContent className="bg-white">
                   <DropdownMenuItem onClick={() => changeLanguage('en')}>
                     English
                   </DropdownMenuItem>
@@ -80,10 +80,6 @@ const Navbar = () => {
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-              
-              <button className="p-2 hover:bg-gray-100 rounded-full">
-                <Search className="w-5 h-5 text-gray-600" />
-              </button>
               
               <Link to="/contact">
                 <Button variant="default" size="sm" className="bg-primary hover:bg-primary/90">
@@ -100,7 +96,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/fa891149-7848-4ab1-b8fe-7036a1271af3.png" 
+              src="/lovable-uploads/69e99ccc-4612-40c6-955d-c467b1e540b7.png" 
               alt="Mazari Health" 
               className="h-8"
             />
