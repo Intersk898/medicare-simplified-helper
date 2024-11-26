@@ -24,6 +24,12 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercentage = currentScrollY / maxScroll;
+      
+      const newOpacity = Math.max(0.3, 1 - scrollPercentage * 1.5);
+      setOpacity(newOpacity);
+
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsVisible(false);
       } else {
@@ -38,12 +44,13 @@ const Navbar = () => {
 
   return (
     <nav 
-      className={`fixed w-full bg-white z-50 transform transition-transform duration-300 ${
+      className={`fixed w-full bg-white z-50 transform transition-all duration-300 ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
-      } shadow-sm`}
+      }`}
+      style={{ opacity }}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
@@ -54,15 +61,15 @@ const Navbar = () => {
           </Link>
 
           {/* Navigation Links */}
-          <div className="flex items-center space-x-16">
-            {/* Column 1 */}
-            <div className="flex flex-col space-y-4">
+          <div className="flex items-center space-x-20">
+            {/* First Column */}
+            <div className="flex flex-col space-y-5">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button 
                     variant="ghost" 
                     size="sm" 
-                    className="gap-2 hover:bg-gray-100 bg-white text-sm font-medium"
+                    className="gap-1 hover:bg-gray-100 bg-white text-sm font-medium px-2 h-8"
                   >
                     <Globe className="w-4 h-4" />
                     {i18n.language === 'en' ? 'English' : 'Español'}
@@ -86,8 +93,8 @@ const Navbar = () => {
               </Link>
             </div>
 
-            {/* Column 2 */}
-            <div className="flex flex-col space-y-4">
+            {/* Second Column */}
+            <div className="flex flex-col space-y-5">
               <Link 
                 to="/find-agent" 
                 className="text-sm font-medium hover:text-primary transition-colors"
@@ -102,8 +109,8 @@ const Navbar = () => {
               </Link>
             </div>
 
-            {/* Column 3 */}
-            <div className="flex flex-col space-y-4">
+            {/* Third Column */}
+            <div className="flex flex-col space-y-5">
               <Link 
                 to="/careers" 
                 className="text-sm font-medium hover:text-primary transition-colors"
@@ -118,13 +125,13 @@ const Navbar = () => {
               </Link>
             </div>
 
-            {/* Column 4 */}
-            <div className="flex flex-col space-y-4">
+            {/* Fourth Column */}
+            <div className="flex flex-col space-y-5">
               <Link to="/contact">
                 <Button 
                   variant="default" 
                   size="sm" 
-                  className="bg-primary hover:bg-primary/90 text-sm font-medium"
+                  className="bg-primary hover:bg-primary/90 text-sm font-medium px-4 h-8"
                 >
                   {t('contactUs')}
                 </Button>
