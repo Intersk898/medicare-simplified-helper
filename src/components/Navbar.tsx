@@ -44,43 +44,28 @@ const Navbar = () => {
 
   return (
     <nav 
-      className={`fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b shadow-sm transform transition-all duration-300 ${
-        isVisible ? 'translate-y-10' : '-translate-y-full'
+      className={`fixed w-full bg-white z-50 border-b shadow-sm transform transition-all duration-300 ${
+        isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
       style={{ opacity }}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col gap-2">
-          {/* Top Row */}
-          <div className="flex items-center justify-between py-2">
-            {/* Left side - Logo and primary links */}
-            <div className="flex items-center gap-8">
-              <Link to="/" className="flex items-center">
-                <img 
-                  src="/lovable-uploads/fa891149-7848-4ab1-b8fe-7036a1271af3.png" 
-                  alt="Mazari Health" 
-                  className="h-8"
-                />
+      {/* Top Bar */}
+      <div className="border-b border-gray-100">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-10">
+            <div className="flex items-center gap-6">
+              <Link to="/find-agent" className="text-sm hover:text-primary transition-colors">
+                {t('findAgent')}
               </Link>
-              <div className="flex items-center gap-6">
-                <Link to="/find-agent" className="text-sm hover:text-primary transition-colors">
-                  {t('findAgent')}
-                </Link>
-                <Link to="/careers" className="text-sm hover:text-primary transition-colors">
-                  {t('careers')}
-                </Link>
-              </div>
+              <Link to="/careers" className="text-sm hover:text-primary transition-colors">
+                {t('careers')}
+              </Link>
             </div>
             
-            {/* Right side - Language and Contact */}
             <div className="flex items-center gap-4">
-              <button className="p-2 hover:bg-gray-100 rounded-full">
-                <Search className="w-5 h-5 text-gray-600" />
-              </button>
-              
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="outline" className="gap-2">
+                  <Button variant="ghost" size="sm" className="gap-2">
                     <Globe className="w-4 h-4" />
                     {i18n.language === 'en' ? 'English' : 'Español'}
                     <ChevronDown className="w-4 h-4" />
@@ -96,26 +81,42 @@ const Navbar = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
               
+              <button className="p-2 hover:bg-gray-100 rounded-full">
+                <Search className="w-5 h-5 text-gray-600" />
+              </button>
+              
               <Link to="/contact">
-                <Button variant="default" className="bg-primary hover:bg-primary/90">
+                <Button variant="default" size="sm" className="bg-primary hover:bg-primary/90">
                   {t('contactUs')}
                 </Button>
               </Link>
             </div>
           </div>
+        </div>
+      </div>
 
-          {/* Bottom Row - Navigation Links */}
-          <div className="flex items-center justify-end gap-6 text-sm pb-2">
-            <Link to="/medicare-basics" className="hover:text-primary transition-colors">
+      {/* Main Navigation */}
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/lovable-uploads/fa891149-7848-4ab1-b8fe-7036a1271af3.png" 
+              alt="Mazari Health" 
+              className="h-8"
+            />
+          </Link>
+
+          <div className="flex items-center gap-8">
+            <Link to="/medicare-basics" className="text-sm font-medium hover:text-primary transition-colors">
               {t('medicareBasics')}
             </Link>
-            <Link to="/coverage-options" className="hover:text-primary transition-colors">
+            <Link to="/coverage-options" className="text-sm font-medium hover:text-primary transition-colors">
               {t('coverageOptions')}
             </Link>
-            <Link to="/enrollment-help" className="hover:text-primary transition-colors">
+            <Link to="/enrollment-help" className="text-sm font-medium hover:text-primary transition-colors">
               {t('enrollmentHelp')}
             </Link>
-            <Link to="/resources" className="hover:text-primary transition-colors">
+            <Link to="/resources" className="text-sm font-medium hover:text-primary transition-colors">
               {t('resources')}
             </Link>
           </div>
