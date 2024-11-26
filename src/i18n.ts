@@ -40,13 +40,13 @@ const resources = {
       emailUs: 'Email Us',
       address: 'Los Angeles, CA',
       phone: '(213) 322-3542',
-      email: 'support@mazarihealth.com',
+      emailAddress: 'support@mazarihealth.com',
       
       // Form labels
       firstName: 'First Name',
       lastName: 'Last Name',
-      email: 'Email Address',
-      phone: 'Phone Number',
+      emailLabel: 'Email Address',
+      phoneLabel: 'Phone Number',
       message: 'Message',
       submit: 'Submit',
       
@@ -65,7 +65,7 @@ const resources = {
       
       // SEO
       metaDescription: 'Expert Medicare guidance in California. Compare Medicare Advantage, Supplement, and Part D plans. Get free consultation from licensed insurance agents.',
-      metaKeywords: 'Medicare plans California, Medicare insurance Los Angeles, Medicare Advantage plans',
+      metaKeywords: 'Medicare plans California, Medicare insurance Los Angeles, Medicare Advantage plans'
     }
   },
   es: {
@@ -105,13 +105,13 @@ const resources = {
       emailUs: 'Envíenos un Correo',
       address: 'Los Ángeles, CA',
       phone: '(213) 322-3542',
-      email: 'support@mazarihealth.com',
+      emailAddress: 'support@mazarihealth.com',
       
       // Form labels
       firstName: 'Nombre',
       lastName: 'Apellido',
-      email: 'Correo Electrónico',
-      phone: 'Número de Teléfono',
+      emailLabel: 'Correo Electrónico',
+      phoneLabel: 'Número de Teléfono',
       message: 'Mensaje',
       submit: 'Enviar',
       
@@ -130,7 +130,7 @@ const resources = {
       
       // SEO
       metaDescription: 'Orientación experta de Medicare en California. Compare planes Medicare Advantage, Suplementarios y Parte D. Obtenga consulta gratuita de agentes de seguros licenciados.',
-      metaKeywords: 'Planes Medicare California, Seguro Medicare Los Ángeles, Planes Medicare Advantage',
+      metaKeywords: 'Planes Medicare California, Seguro Medicare Los Ángeles, Planes Medicare Advantage'
     }
   }
 };

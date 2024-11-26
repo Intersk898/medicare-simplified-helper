@@ -1,7 +1,7 @@
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Globe, ChevronDown } from "lucide-react";
+import { Globe, ChevronDown, Search } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import {
   DropdownMenu,
@@ -44,7 +44,7 @@ const Navbar = () => {
 
   return (
     <nav 
-      className={`fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b transform transition-all duration-300 ${
+      className={`fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b shadow-sm transform transition-all duration-300 ${
         isVisible ? 'translate-y-10' : '-translate-y-full'
       }`}
       style={{ opacity }}
@@ -53,16 +53,31 @@ const Navbar = () => {
         <div className="flex flex-col gap-2">
           {/* Top Row */}
           <div className="flex items-center justify-between py-2">
-            <div className="flex items-center gap-6">
-              <Link to="/find-agent" className="text-sm hover:text-primary transition-colors">
-                {t('findAgent')}
+            {/* Left side - Logo and primary links */}
+            <div className="flex items-center gap-8">
+              <Link to="/" className="flex items-center">
+                <img 
+                  src="/lovable-uploads/fa891149-7848-4ab1-b8fe-7036a1271af3.png" 
+                  alt="Mazari Health" 
+                  className="h-8"
+                />
               </Link>
-              <Link to="/careers" className="text-sm hover:text-primary transition-colors">
-                {t('careers')}
-              </Link>
+              <div className="flex items-center gap-6">
+                <Link to="/find-agent" className="text-sm hover:text-primary transition-colors">
+                  {t('findAgent')}
+                </Link>
+                <Link to="/careers" className="text-sm hover:text-primary transition-colors">
+                  {t('careers')}
+                </Link>
+              </div>
             </div>
             
+            {/* Right side - Language and Contact */}
             <div className="flex items-center gap-4">
+              <button className="p-2 hover:bg-gray-100 rounded-full">
+                <Search className="w-5 h-5 text-gray-600" />
+              </button>
+              
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" className="gap-2">
