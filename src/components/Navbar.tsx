@@ -52,32 +52,33 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col">
           {/* Top Row */}
-          <div className="flex items-center justify-between py-2 border-b relative">
-            <Link to="/" className="flex items-center absolute -bottom-6">
+          <div className="flex items-center justify-between py-2 relative">
+            <div className="flex-1 border-b border-gray-200" style={{ width: '30%' }} />
+            <Link to="/" className="flex items-center absolute -bottom-6 left-0">
               <img 
                 src="/lovable-uploads/69e99ccc-4612-40c6-955d-c467b1e540b7.png" 
                 alt="Mazari Health" 
                 className="h-16"
               />
             </Link>
-            <div className="flex-1 flex justify-end items-center space-x-6">
+            <div className="flex-1 flex justify-end items-center space-x-6 border-b border-gray-200">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button 
                     variant="secondary" 
                     size="sm" 
-                    className="gap-2"
+                    className="gap-2 bg-white hover:bg-gray-50"
                   >
                     <Globe className="w-4 h-4" />
                     {i18n.language === 'en' ? 'English' : 'Español'}
                     <ChevronDown className="w-4 h-4" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent>
-                  <DropdownMenuItem onClick={() => changeLanguage('en')}>
+                <DropdownMenuContent className="bg-white border border-gray-200">
+                  <DropdownMenuItem onClick={() => changeLanguage('en')} className="hover:bg-gray-50">
                     English
                   </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => changeLanguage('es')}>
+                  <DropdownMenuItem onClick={() => changeLanguage('es')} className="hover:bg-gray-50">
                     Español
                   </DropdownMenuItem>
                 </DropdownMenuContent>
