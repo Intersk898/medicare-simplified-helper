@@ -50,81 +50,86 @@ const Navbar = () => {
       style={{ opacity }}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-14">
-          {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img 
-              src="/lovable-uploads/69e99ccc-4612-40c6-955d-c467b1e540b7.png" 
-              alt="Mazari Health" 
-              className="h-8"
-            />
-          </Link>
-
-          {/* Navigation Links */}
-          <div className="hidden lg:flex items-center space-x-6">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  className="gap-2 hover:bg-gray-100"
-                >
-                  <Globe className="w-4 h-4" />
-                  {i18n.language === 'en' ? 'English' : 'Español'}
-                  <ChevronDown className="w-4 h-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem onClick={() => changeLanguage('en')}>
-                  English
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => changeLanguage('es')}>
-                  Español
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            <Link 
-              to="/medicare-basics" 
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              {t('medicareBasics')}
+        <div className="flex flex-col">
+          {/* Top Row */}
+          <div className="flex items-center justify-between py-2 border-b">
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/lovable-uploads/69e99ccc-4612-40c6-955d-c467b1e540b7.png" 
+                alt="Mazari Health" 
+                className="h-8"
+              />
             </Link>
+            <div className="flex items-center space-x-6">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="gap-2 hover:bg-gray-100"
+                  >
+                    <Globe className="w-4 h-4" />
+                    {i18n.language === 'en' ? 'English' : 'Español'}
+                    <ChevronDown className="w-4 h-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem onClick={() => changeLanguage('en')}>
+                    English
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => changeLanguage('es')}>
+                    Español
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
 
-            <Link 
-              to="/find-agent" 
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              {t('findAgent')}
-            </Link>
+              <Link 
+                to="/find-agent" 
+                className="text-sm font-medium hover:text-primary transition-colors"
+              >
+                {t('findAgent')}
+              </Link>
 
-            <Link 
-              to="/coverage-options" 
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              {t('coverageOptions')}
-            </Link>
+              <Link 
+                to="/careers" 
+                className="text-sm font-medium hover:text-primary transition-colors"
+              >
+                {t('careers')}
+              </Link>
+            </div>
+          </div>
 
-            <Link 
-              to="/careers" 
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              {t('careers')}
-            </Link>
+          {/* Bottom Row */}
+          <div className="flex items-center justify-between py-3">
+            <div className="flex items-center space-x-6">
+              <Link 
+                to="/medicare-basics" 
+                className="text-sm font-medium hover:text-primary transition-colors"
+              >
+                {t('medicareBasics')}
+              </Link>
 
-            <Link 
-              to="/enrollment-help" 
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              {t('enrollmentHelp')}
-            </Link>
+              <Link 
+                to="/coverage-options" 
+                className="text-sm font-medium hover:text-primary transition-colors"
+              >
+                {t('coverageOptions')}
+              </Link>
 
-            <Link 
-              to="/resources" 
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              {t('resources')}
-            </Link>
+              <Link 
+                to="/enrollment-help" 
+                className="text-sm font-medium hover:text-primary transition-colors"
+              >
+                {t('enrollmentHelp')}
+              </Link>
+
+              <Link 
+                to="/resources" 
+                className="text-sm font-medium hover:text-primary transition-colors"
+              >
+                {t('resources')}
+              </Link>
+            </div>
 
             <div className="flex items-center gap-2 pl-4 border-l">
               <HelpCircle className="w-4 h-4 text-primary" />
