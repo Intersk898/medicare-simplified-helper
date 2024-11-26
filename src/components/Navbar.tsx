@@ -1,7 +1,7 @@
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Globe, ChevronDown } from "lucide-react";
+import { Globe, ChevronDown, HelpCircle } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import {
   DropdownMenu,
@@ -44,104 +44,99 @@ const Navbar = () => {
 
   return (
     <nav 
-      className={`fixed w-full bg-white z-50 transform transition-all duration-300 ${
-        isVisible ? 'translate-y-10' : '-translate-y-full'
+      className={`fixed w-full bg-white shadow-sm z-50 transform transition-all duration-300 ${
+        isVisible ? 'translate-y-8' : '-translate-y-full'
       }`}
       style={{ opacity }}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
               src="/lovable-uploads/69e99ccc-4612-40c6-955d-c467b1e540b7.png" 
               alt="Mazari Health" 
-              className="h-10"
+              className="h-8"
             />
           </Link>
 
           {/* Navigation Links */}
-          <div className="flex items-center space-x-24">
-            {/* First Column */}
-            <div className="flex flex-col space-y-4">
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button 
-                    variant="ghost" 
-                    size="sm" 
-                    className="gap-2 hover:bg-gray-100 bg-white text-sm font-medium px-3"
-                  >
-                    <Globe className="w-4 h-4" />
-                    {i18n.language === 'en' ? 'English' : 'Español'}
-                    <ChevronDown className="w-4 h-4" />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="bg-white">
-                  <DropdownMenuItem onClick={() => changeLanguage('en')}>
-                    English
-                  </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => changeLanguage('es')}>
-                    Español
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-              <Link 
-                to="/medicare-basics" 
-                className="text-sm font-medium hover:text-primary transition-colors px-3"
-              >
-                {t('medicareBasics')}
-              </Link>
-            </div>
-
-            {/* Second Column */}
-            <div className="flex flex-col space-y-4">
-              <Link 
-                to="/find-agent" 
-                className="text-sm font-medium hover:text-primary transition-colors px-3"
-              >
-                {t('findAgent')}
-              </Link>
-              <Link 
-                to="/coverage-options" 
-                className="text-sm font-medium hover:text-primary transition-colors px-3"
-              >
-                {t('coverageOptions')}
-              </Link>
-            </div>
-
-            {/* Third Column */}
-            <div className="flex flex-col space-y-4">
-              <Link 
-                to="/careers" 
-                className="text-sm font-medium hover:text-primary transition-colors px-3"
-              >
-                {t('careers')}
-              </Link>
-              <Link 
-                to="/enrollment-help" 
-                className="text-sm font-medium hover:text-primary transition-colors px-3"
-              >
-                {t('enrollmentHelp')}
-              </Link>
-            </div>
-
-            {/* Fourth Column */}
-            <div className="flex flex-col space-y-4">
-              <Link to="/contact">
+          <div className="hidden lg:flex items-center space-x-6">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
                 <Button 
-                  variant="default" 
+                  variant="ghost" 
                   size="sm" 
-                  className="bg-primary hover:bg-primary/90 text-sm font-medium px-4"
+                  className="gap-2 hover:bg-gray-100"
+                >
+                  <Globe className="w-4 h-4" />
+                  {i18n.language === 'en' ? 'English' : 'Español'}
+                  <ChevronDown className="w-4 h-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem onClick={() => changeLanguage('en')}>
+                  English
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => changeLanguage('es')}>
+                  Español
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            <Link 
+              to="/medicare-basics" 
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
+              {t('medicareBasics')}
+            </Link>
+
+            <Link 
+              to="/find-agent" 
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
+              {t('findAgent')}
+            </Link>
+
+            <Link 
+              to="/coverage-options" 
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
+              {t('coverageOptions')}
+            </Link>
+
+            <Link 
+              to="/careers" 
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
+              {t('careers')}
+            </Link>
+
+            <Link 
+              to="/enrollment-help" 
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
+              {t('enrollmentHelp')}
+            </Link>
+
+            <Link 
+              to="/resources" 
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
+              {t('resources')}
+            </Link>
+
+            <div className="flex items-center gap-2 pl-4 border-l">
+              <HelpCircle className="w-4 h-4 text-primary" />
+              <div className="flex flex-col">
+                <span className="text-xs text-gray-600">Questions?</span>
+                <Link 
+                  to="/contact"
+                  className="text-sm font-medium hover:text-primary transition-colors"
                 >
                   {t('contactUs')}
-                </Button>
-              </Link>
-              <Link 
-                to="/resources" 
-                className="text-sm font-medium hover:text-primary transition-colors px-3"
-              >
-                {t('resources')}
-              </Link>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

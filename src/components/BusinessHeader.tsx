@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Phone } from "lucide-react";
+import { Phone, Clock } from "lucide-react";
 
 const BusinessHeader = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -20,13 +20,16 @@ const BusinessHeader = () => {
   }, [lastScrollY]);
 
   return (
-    <div className={`fixed w-full bg-primary text-white text-sm py-2 z-[70] transform transition-transform duration-300 ${
+    <div className={`fixed w-full bg-primary text-white py-1.5 z-[70] transform transition-transform duration-300 ${
       isVisible ? 'translate-y-0' : '-translate-y-full'
     }`}>
-      <div className="container mx-auto px-4 text-center flex justify-between items-center">
-        <span>Hours: 8 a.m. to 8 p.m. 7 days a week</span>
-        <a href="tel:2133223542" className="flex items-center hover:underline">
-          <Phone className="w-4 h-4 mr-2" />
+      <div className="container mx-auto px-4 flex justify-between items-center text-sm">
+        <div className="flex items-center gap-2">
+          <Clock className="w-4 h-4" />
+          <span>Hours: 8 a.m. to 8 p.m. 7 days a week</span>
+        </div>
+        <a href="tel:2133223542" className="flex items-center gap-2 hover:underline">
+          <Phone className="w-4 h-4" />
           (213) 322-3542
         </a>
       </div>
