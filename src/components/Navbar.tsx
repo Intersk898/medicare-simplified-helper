@@ -1,8 +1,14 @@
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Globe } from "lucide-react";
+import { Globe, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -43,37 +49,38 @@ const Navbar = () => {
       }`}
       style={{ opacity }}
     >
-      <div className="container mx-auto px-4 py-3">
-        <div className="flex flex-col gap-4">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col gap-2">
           {/* Top Row */}
-          <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center gap-2">
-              <img 
-                src="/lovable-uploads/eaa402d1-e482-4c2e-8c37-fa8735a198de.png" 
-                alt="Mazari Health" 
-                className="h-12 w-auto"
-              />
-            </Link>
+          <div className="flex items-center justify-between py-2">
+            <div className="flex items-center gap-6">
+              <Link to="/find-agent" className="text-sm hover:text-primary transition-colors">
+                {t('findAgent')}
+              </Link>
+              <Link to="/careers" className="text-sm hover:text-primary transition-colors">
+                {t('careers')}
+              </Link>
+            </div>
             
             <div className="flex items-center gap-4">
-              <div className="flex gap-2">
-                <Button 
-                  variant={i18n.language === 'en' ? "default" : "outline"}
-                  onClick={() => changeLanguage('en')}
-                  className="bg-primary hover:bg-primary/90"
-                >
-                  <Globe className="w-4 h-4 mr-2" />
-                  English
-                </Button>
-                <Button 
-                  variant={i18n.language === 'es' ? "default" : "outline"}
-                  onClick={() => changeLanguage('es')}
-                  className="bg-primary hover:bg-primary/90"
-                >
-                  <Globe className="w-4 h-4 mr-2" />
-                  Español
-                </Button>
-              </div>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline" className="gap-2">
+                    <Globe className="w-4 h-4" />
+                    {i18n.language === 'en' ? 'English' : 'Español'}
+                    <ChevronDown className="w-4 h-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem onClick={() => changeLanguage('en')}>
+                    English
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => changeLanguage('es')}>
+                    Español
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              
               <Link to="/contact">
                 <Button variant="default" className="bg-primary hover:bg-primary/90">
                   {t('contactUs')}
@@ -83,7 +90,7 @@ const Navbar = () => {
           </div>
 
           {/* Bottom Row - Navigation Links */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
+          <div className="flex items-center justify-end gap-6 text-sm pb-2">
             <Link to="/medicare-basics" className="hover:text-primary transition-colors">
               {t('medicareBasics')}
             </Link>
@@ -95,12 +102,6 @@ const Navbar = () => {
             </Link>
             <Link to="/resources" className="hover:text-primary transition-colors">
               {t('resources')}
-            </Link>
-            <Link to="/find-agent" className="hover:text-primary transition-colors">
-              {t('findAgent')}
-            </Link>
-            <Link to="/careers" className="hover:text-primary transition-colors">
-              {t('careers')}
             </Link>
           </div>
         </div>

@@ -14,13 +14,15 @@ const WhatsAppButton = () => {
       const windowHeight = window.innerHeight;
       const distanceFromFooter = footerTop - windowHeight;
       
-      // Start fading 100px before footer
-      const fadeStart = 100;
+      // Start fading 200px before footer for smoother transition
+      const fadeStart = 200;
       
       if (distanceFromFooter < fadeStart) {
-        const newOpacity = Math.max(0, distanceFromFooter / fadeStart);
+        // Use cubic-bezier for smoother fade
+        const fadeProgress = Math.max(0, distanceFromFooter / fadeStart);
+        const newOpacity = Math.pow(fadeProgress, 2); // Square for smoother fade
         setOpacity(newOpacity);
-        setIsVisible(newOpacity > 0.1);
+        setIsVisible(newOpacity > 0.05);
       } else {
         setOpacity(1);
         setIsVisible(true);
@@ -28,6 +30,7 @@ const WhatsAppButton = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -38,10 +41,11 @@ const WhatsAppButton = () => {
       href="https://wa.me/12133223542"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-40 transition-all duration-300 hover:scale-110"
+      className="fixed bottom-6 right-6 z-40 transition-all duration-500 ease-in-out hover:scale-110"
       style={{ 
         opacity,
-        pointerEvents: opacity < 0.1 ? 'none' : 'auto'
+        pointerEvents: opacity < 0.05 ? 'none' : 'auto',
+        transform: `scale(${0.9 + (opacity * 0.1)})` // Subtle scale effect while fading
       }}
     >
       <div className="bg-primary text-white p-4 rounded-full shadow-lg hover:bg-primary/90 transition-colors">
