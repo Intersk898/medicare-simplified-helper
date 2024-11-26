@@ -25,11 +25,11 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#185c76", // Blue
+          DEFAULT: "#008080", // Teal color from Mazari logo
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#ec6525", // Orange
+          DEFAULT: "#ec6525",
           foreground: "#FFFFFF",
         },
         destructive: {

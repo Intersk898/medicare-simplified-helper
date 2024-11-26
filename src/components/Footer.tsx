@@ -17,11 +17,11 @@ const Footer = () => {
               <a href="#" className="text-gray-600 hover:text-primary transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-600 hover:text-primary transition-colors">
-                <Twitter className="w-5 h-5" />
+              <a href="https://www.linkedin.com/company/mazari-health-insurance-services/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">
+                <Linkedin className="w-5 h-5" />
               </a>
               <a href="#" className="text-gray-600 hover:text-primary transition-colors">
-                <Linkedin className="w-5 h-5" />
+                <Twitter className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -41,7 +41,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm text-gray-600">
               <li>Los Angeles, CA</li>
               <li>Phone: (213) 322-3542</li>
-              <li>Email: info@mazarihealth.com</li>
+              <li>Email: support@mazarihealth.com</li>
             </ul>
           </div>
           
@@ -57,7 +57,8 @@ const Footer = () => {
         <div className="border-t pt-8">
           <div className="flex flex-col space-y-4">
             <div className="text-sm text-gray-600">
-              <p>California License #6010059 Mazari Health Insurance Services, LLC.</p>
+              <p className="mb-4">Medicare has neither reviewed nor endorsed this information. Not connected with or endorsed by the United States government or the federal Medicare program.</p>
+              <p>We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or Call 1-800-MEDICARE to get information on all of your options.</p>
             </div>
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <p className="text-sm text-gray-600">

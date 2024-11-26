@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import Accessibility from "./pages/Accessibility";
 import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <WhatsAppButton />
     </TooltipProvider>
   </QueryClientProvider>
 );
