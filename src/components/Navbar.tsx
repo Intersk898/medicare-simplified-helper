@@ -45,31 +45,31 @@ const Navbar = () => {
   return (
     <nav 
       className={`fixed w-full bg-white z-50 transform transition-all duration-300 ${
-        isVisible ? 'translate-y-0' : '-translate-y-full'
+        isVisible ? 'translate-y-10' : '-translate-y-full'
       }`}
       style={{ opacity }}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-14">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
               src="/lovable-uploads/69e99ccc-4612-40c6-955d-c467b1e540b7.png" 
               alt="Mazari Health" 
-              className="h-8"
+              className="h-10"
             />
           </Link>
 
           {/* Navigation Links */}
-          <div className="flex items-center space-x-20">
+          <div className="flex items-center space-x-24">
             {/* First Column */}
-            <div className="flex flex-col space-y-5">
+            <div className="flex flex-col space-y-4">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button 
                     variant="ghost" 
                     size="sm" 
-                    className="gap-1 hover:bg-gray-100 bg-white text-sm font-medium px-2 h-8"
+                    className="gap-2 hover:bg-gray-100 bg-white text-sm font-medium px-3"
                   >
                     <Globe className="w-4 h-4" />
                     {i18n.language === 'en' ? 'English' : 'Español'}
@@ -87,58 +87,58 @@ const Navbar = () => {
               </DropdownMenu>
               <Link 
                 to="/medicare-basics" 
-                className="text-sm font-medium hover:text-primary transition-colors"
+                className="text-sm font-medium hover:text-primary transition-colors px-3"
               >
                 {t('medicareBasics')}
               </Link>
             </div>
 
             {/* Second Column */}
-            <div className="flex flex-col space-y-5">
+            <div className="flex flex-col space-y-4">
               <Link 
                 to="/find-agent" 
-                className="text-sm font-medium hover:text-primary transition-colors"
+                className="text-sm font-medium hover:text-primary transition-colors px-3"
               >
                 {t('findAgent')}
               </Link>
               <Link 
                 to="/coverage-options" 
-                className="text-sm font-medium hover:text-primary transition-colors"
+                className="text-sm font-medium hover:text-primary transition-colors px-3"
               >
                 {t('coverageOptions')}
               </Link>
             </div>
 
             {/* Third Column */}
-            <div className="flex flex-col space-y-5">
+            <div className="flex flex-col space-y-4">
               <Link 
                 to="/careers" 
-                className="text-sm font-medium hover:text-primary transition-colors"
+                className="text-sm font-medium hover:text-primary transition-colors px-3"
               >
                 {t('careers')}
               </Link>
               <Link 
                 to="/enrollment-help" 
-                className="text-sm font-medium hover:text-primary transition-colors"
+                className="text-sm font-medium hover:text-primary transition-colors px-3"
               >
                 {t('enrollmentHelp')}
               </Link>
             </div>
 
             {/* Fourth Column */}
-            <div className="flex flex-col space-y-5">
+            <div className="flex flex-col space-y-4">
               <Link to="/contact">
                 <Button 
                   variant="default" 
                   size="sm" 
-                  className="bg-primary hover:bg-primary/90 text-sm font-medium px-4 h-8"
+                  className="bg-primary hover:bg-primary/90 text-sm font-medium px-4"
                 >
                   {t('contactUs')}
                 </Button>
               </Link>
               <Link 
                 to="/resources" 
-                className="text-sm font-medium hover:text-primary transition-colors"
+                className="text-sm font-medium hover:text-primary transition-colors px-3"
               >
                 {t('resources')}
               </Link>
