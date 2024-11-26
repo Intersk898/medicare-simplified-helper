@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -57,16 +58,16 @@ const Footer = () => {
         <div className="border-t pt-8">
           <div className="flex flex-col space-y-4">
             <div className="text-sm text-gray-600">
-              <p className="mb-4">Medicare has neither reviewed nor endorsed this information. Not connected with or endorsed by the United States government or the federal Medicare program.</p>
-              <p>We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or Call 1-800-MEDICARE to get information on all of your options.</p>
+              <p className="mb-4">California License #6010059 Mazari Health Insurance Services, LLC</p>
             </div>
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <p className="text-sm text-gray-600">
                 Copyright © {new Date().getFullYear()} Mazari Health. All rights reserved.
               </p>
               <div className="flex flex-wrap gap-4 text-sm text-gray-600">
-                <a href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</a>
-                <a href="/accessibility" className="hover:text-primary transition-colors">Accessibility</a>
+                <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+                <Link to="/disclaimer" className="hover:text-primary transition-colors">Disclaimer</Link>
+                <Link to="/accessibility" className="hover:text-primary transition-colors">Accessibility</Link>
               </div>
             </div>
           </div>
