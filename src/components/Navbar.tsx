@@ -45,7 +45,7 @@ const Navbar = () => {
   return (
     <nav 
       className={`fixed w-full bg-white z-50 border-b shadow-sm transform transition-all duration-300 ${
-        isVisible ? 'translate-y-0' : '-translate-y-full'
+        isVisible ? 'translate-y-10' : '-translate-y-full'
       }`}
       style={{ opacity }}
     >
