@@ -13,6 +13,7 @@ import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
+  const [opacity, setOpacity] = useState(1);
   const [lastScrollY, setLastScrollY] = useState(0);
   const { t, i18n } = useTranslation();
 
@@ -22,30 +23,34 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    const savedLang = localStorage.getItem('language');
-    if (savedLang) {
-      i18n.changeLanguage(savedLang);
-    }
-  }, []);
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercentage = currentScrollY / maxScroll;
+      
+      // Calculate opacity based on scroll position
+      const newOpacity = Math.max(0.3, 1 - scrollPercentage * 1.5);
+      setOpacity(newOpacity);
 
-  useEffect(() => {
-    const controlNavbar = () => {
-      if (window.scrollY > lastScrollY && window.scrollY > 100) {
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsVisible(false);
       } else {
         setIsVisible(true);
       }
-      setLastScrollY(window.scrollY);
+      setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener('scroll', controlNavbar);
-    return () => window.removeEventListener('scroll', controlNavbar);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
   return (
-    <nav className={`fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b transform transition-transform duration-300 ${
-      isVisible ? 'translate-y-10' : '-translate-y-full'
-    }`}>
+    <nav 
+      className={`fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b transform transition-all duration-300 ${
+        isVisible ? 'translate-y-10' : '-translate-y-full'
+      }`}
+      style={{ opacity }}
+    >
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
@@ -57,58 +62,58 @@ const Navbar = () => {
           </Link>
           
           <div className="flex items-center gap-6">
+            {/* Language Selector */}
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-md hover:bg-primary/90 transition-colors">
+              <DropdownMenuTrigger className="flex items-center gap-2 bg-[#008080] text-white px-4 py-2 rounded-md hover:bg-[#008080]/90 transition-colors">
                 <Globe className="w-4 h-4" />
                 {i18n.language === 'es' ? 'Español' : 'English'}
                 <ChevronDown className="w-4 h-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem onClick={() => changeLanguage('en')} className="cursor-pointer">
+              <DropdownMenuContent className="bg-white">
+                <DropdownMenuItem onClick={() => changeLanguage('en')} className="cursor-pointer hover:bg-[#008080]/10">
                   English
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => changeLanguage('es')} className="cursor-pointer">
+                <DropdownMenuItem onClick={() => changeLanguage('es')} className="cursor-pointer hover:bg-[#008080]/10">
                   Español
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
+            {/* Main Menu Dropdown */}
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-2 hover:text-primary">
+              <DropdownMenuTrigger className="flex items-center gap-2 hover:text-[#008080] transition-colors">
                 <Menu className="w-4 h-4" />
-                {t('menu')}
+                {t('medicareInformation')}
               </DropdownMenuTrigger>
-              <DropdownMenuContent>
+              <DropdownMenuContent className="bg-white w-56">
                 <DropdownMenuItem>
-                  <Link to="/medicare-basics" className="w-full">{t('medicareBasics')}</Link>
+                  <Link to="/medicare-basics" className="w-full hover:text-[#008080]">{t('medicareBasics')}</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <Link to="/coverage-options" className="w-full">{t('coverageOptions')}</Link>
+                  <Link to="/coverage-options" className="w-full hover:text-[#008080]">{t('coverageOptions')}</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <Link to="/enrollment-help" className="w-full">{t('enrollmentHelp')}</Link>
+                  <Link to="/enrollment-help" className="w-full hover:text-[#008080]">{t('enrollmentHelp')}</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <Link to="/resources" className="w-full">{t('resources')}</Link>
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem>
-                  <Link to="/find-agent" className="flex items-center gap-2 w-full">
-                    <MapPin className="w-4 h-4" />
-                    {t('findAgent')}
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Link to="/careers" className="flex items-center gap-2 w-full">
-                    <BriefcaseIcon className="w-4 h-4" />
-                    {t('careers')}
-                  </Link>
+                  <Link to="/resources" className="w-full hover:text-[#008080]">{t('resources')}</Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
+            {/* Quick Access Links */}
+            <Link to="/find-agent" className="hidden md:flex items-center gap-2 hover:text-[#008080] transition-colors">
+              <MapPin className="w-4 h-4" />
+              {t('findAgent')}
+            </Link>
+            
+            <Link to="/careers" className="hidden md:flex items-center gap-2 hover:text-[#008080] transition-colors">
+              <BriefcaseIcon className="w-4 h-4" />
+              {t('careers')}
+            </Link>
+
             <Link to="/contact">
-              <Button variant="default" className="bg-primary hover:bg-primary/90">
+              <Button variant="default" className="bg-[#008080] hover:bg-[#008080]/90">
                 {t('contactUs')}
               </Button>
             </Link>
