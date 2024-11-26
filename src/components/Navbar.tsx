@@ -53,7 +53,7 @@ const Navbar = () => {
         <div className="flex flex-col">
           {/* Top Row */}
           <div className="flex items-center justify-between py-2 relative">
-            <div className="flex-1 border-b border-gray-200" style={{ width: '30%' }} />
+            <div className="flex-1" />
             <Link to="/" className="flex items-center absolute -bottom-6 left-0">
               <img 
                 src="/lovable-uploads/69e99ccc-4612-40c6-955d-c467b1e540b7.png" 
@@ -61,13 +61,13 @@ const Navbar = () => {
                 className="h-16"
               />
             </Link>
-            <div className="flex-1 flex justify-end items-center space-x-6 border-b border-gray-200">
+            <div className="flex-1 flex justify-end items-center space-x-6">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button 
-                    variant="secondary" 
+                    variant="ghost" 
                     size="sm" 
-                    className="gap-2 bg-white hover:bg-gray-50"
+                    className="gap-2 text-gray-900 hover:bg-gray-50"
                   >
                     <Globe className="w-4 h-4" />
                     {i18n.language === 'en' ? 'English' : 'Español'}
@@ -86,7 +86,7 @@ const Navbar = () => {
 
               <Link 
                 to="/find-agent" 
-                className="flex items-center gap-1.5 text-sm font-medium hover:text-primary transition-colors"
+                className="flex items-center gap-1.5 text-sm font-medium text-gray-900 hover:text-primary transition-colors pt-1"
               >
                 <UserSearch className="w-4 h-4" />
                 {t('findAgent')}
@@ -94,7 +94,7 @@ const Navbar = () => {
 
               <Link 
                 to="/careers" 
-                className="flex items-center gap-1.5 text-sm font-medium hover:text-primary transition-colors"
+                className="flex items-center gap-1.5 text-sm font-medium text-gray-900 hover:text-primary transition-colors pt-1"
               >
                 <Briefcase className="w-4 h-4" />
                 {t('careers')}
@@ -110,28 +110,28 @@ const Navbar = () => {
             <div className="flex items-center justify-center flex-1 space-x-8">
               <Link 
                 to="/medicare-basics" 
-                className="text-sm font-medium hover:text-primary transition-colors"
+                className="text-sm font-medium text-gray-900 hover:text-primary transition-colors"
               >
                 {t('medicareBasics')}
               </Link>
 
               <Link 
                 to="/coverage-options" 
-                className="text-sm font-medium hover:text-primary transition-colors"
+                className="text-sm font-medium text-gray-900 hover:text-primary transition-colors"
               >
                 {t('coverageOptions')}
               </Link>
 
               <Link 
                 to="/enrollment-help" 
-                className="text-sm font-medium hover:text-primary transition-colors"
+                className="text-sm font-medium text-gray-900 hover:text-primary transition-colors"
               >
                 {t('enrollmentHelp')}
               </Link>
 
               <Link 
                 to="/resources" 
-                className="text-sm font-medium hover:text-primary transition-colors"
+                className="text-sm font-medium text-gray-900 hover:text-primary transition-colors"
               >
                 {t('resources')}
               </Link>
@@ -143,7 +143,7 @@ const Navbar = () => {
                 <span className="text-xs text-gray-600">Questions?</span>
                 <Link 
                   to="/contact"
-                  className="text-sm font-medium hover:text-primary transition-colors"
+                  className="text-sm font-medium text-gray-900 hover:text-primary transition-colors"
                 >
                   {t('contactUs')}
                 </Link>
