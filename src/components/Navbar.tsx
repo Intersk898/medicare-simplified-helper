@@ -50,22 +50,27 @@ const Navbar = () => {
       style={{ opacity }}
     >
       <div className="container mx-auto px-4">
-        {/* Top Navigation */}
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between py-6">
+          {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
               src="/lovable-uploads/69e99ccc-4612-40c6-955d-c467b1e540b7.png" 
               alt="Mazari Health" 
-              className="h-8"
+              className="h-12"
             />
           </Link>
 
-          <div className="flex items-center space-x-16">
+          {/* Navigation Links */}
+          <div className="flex items-start space-x-24">
             {/* First Column */}
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-6">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="sm" className="gap-2 hover:bg-gray-100">
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="gap-2 hover:bg-gray-100 bg-white"
+                  >
                     <Globe className="w-4 h-4" />
                     {i18n.language === 'en' ? 'English' : 'Español'}
                     <ChevronDown className="w-4 h-4" />
@@ -80,39 +85,61 @@ const Navbar = () => {
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-              <Link to="/medicare-basics" className="text-sm font-medium hover:text-primary transition-colors">
+              <Link 
+                to="/medicare-basics" 
+                className="text-base font-medium hover:text-primary transition-colors"
+              >
                 {t('medicareBasics')}
               </Link>
             </div>
 
             {/* Second Column */}
-            <div className="flex flex-col space-y-4">
-              <Link to="/find-agent" className="text-sm hover:text-primary transition-colors">
+            <div className="flex flex-col space-y-6">
+              <Link 
+                to="/find-agent" 
+                className="text-base font-medium hover:text-primary transition-colors"
+              >
                 {t('findAgent')}
               </Link>
-              <Link to="/coverage-options" className="text-sm font-medium hover:text-primary transition-colors">
+              <Link 
+                to="/coverage-options" 
+                className="text-base font-medium hover:text-primary transition-colors"
+              >
                 {t('coverageOptions')}
               </Link>
             </div>
 
             {/* Third Column */}
-            <div className="flex flex-col space-y-4">
-              <Link to="/careers" className="text-sm hover:text-primary transition-colors">
+            <div className="flex flex-col space-y-6">
+              <Link 
+                to="/careers" 
+                className="text-base font-medium hover:text-primary transition-colors"
+              >
                 {t('careers')}
               </Link>
-              <Link to="/enrollment-help" className="text-sm font-medium hover:text-primary transition-colors">
+              <Link 
+                to="/enrollment-help" 
+                className="text-base font-medium hover:text-primary transition-colors"
+              >
                 {t('enrollmentHelp')}
               </Link>
             </div>
 
             {/* Fourth Column */}
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-6">
               <Link to="/contact">
-                <Button variant="default" size="sm" className="bg-primary hover:bg-primary/90">
+                <Button 
+                  variant="default" 
+                  size="sm" 
+                  className="bg-primary hover:bg-primary/90 text-base px-6"
+                >
                   {t('contactUs')}
                 </Button>
               </Link>
-              <Link to="/resources" className="text-sm font-medium hover:text-primary transition-colors">
+              <Link 
+                to="/resources" 
+                className="text-base font-medium hover:text-primary transition-colors"
+              >
                 {t('resources')}
               </Link>
             </div>
