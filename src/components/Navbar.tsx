@@ -44,25 +44,25 @@ const Navbar = () => {
 
   return (
     <nav 
-      className={`fixed w-full bg-white z-50 border-b shadow-sm transform transition-all duration-300 ${
+      className={`fixed w-full bg-white z-50 transform transition-all duration-300 ${
         isVisible ? 'translate-y-10' : '-translate-y-full'
       }`}
       style={{ opacity }}
     >
-      {/* Top Bar */}
-      <div className="border-b border-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-10">
-            <div className="flex items-center gap-6">
-              <Link to="/find-agent" className="text-sm hover:text-primary transition-colors">
-                {t('findAgent')}
-              </Link>
-              <Link to="/careers" className="text-sm hover:text-primary transition-colors">
-                {t('careers')}
-              </Link>
-            </div>
-            
-            <div className="flex items-center gap-4">
+      <div className="container mx-auto px-4">
+        {/* Top Navigation */}
+        <div className="flex items-center justify-between h-16">
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/lovable-uploads/69e99ccc-4612-40c6-955d-c467b1e540b7.png" 
+              alt="Mazari Health" 
+              className="h-8"
+            />
+          </Link>
+
+          <div className="flex items-center space-x-16">
+            {/* First Column */}
+            <div className="flex flex-col space-y-4">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" size="sm" className="gap-2 hover:bg-gray-100">
@@ -80,41 +80,42 @@ const Navbar = () => {
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-              
+              <Link to="/medicare-basics" className="text-sm font-medium hover:text-primary transition-colors">
+                {t('medicareBasics')}
+              </Link>
+            </div>
+
+            {/* Second Column */}
+            <div className="flex flex-col space-y-4">
+              <Link to="/find-agent" className="text-sm hover:text-primary transition-colors">
+                {t('findAgent')}
+              </Link>
+              <Link to="/coverage-options" className="text-sm font-medium hover:text-primary transition-colors">
+                {t('coverageOptions')}
+              </Link>
+            </div>
+
+            {/* Third Column */}
+            <div className="flex flex-col space-y-4">
+              <Link to="/careers" className="text-sm hover:text-primary transition-colors">
+                {t('careers')}
+              </Link>
+              <Link to="/enrollment-help" className="text-sm font-medium hover:text-primary transition-colors">
+                {t('enrollmentHelp')}
+              </Link>
+            </div>
+
+            {/* Fourth Column */}
+            <div className="flex flex-col space-y-4">
               <Link to="/contact">
                 <Button variant="default" size="sm" className="bg-primary hover:bg-primary/90">
                   {t('contactUs')}
                 </Button>
               </Link>
+              <Link to="/resources" className="text-sm font-medium hover:text-primary transition-colors">
+                {t('resources')}
+              </Link>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Navigation */}
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center">
-            <img 
-              src="/lovable-uploads/69e99ccc-4612-40c6-955d-c467b1e540b7.png" 
-              alt="Mazari Health" 
-              className="h-8"
-            />
-          </Link>
-
-          <div className="flex items-center gap-8">
-            <Link to="/medicare-basics" className="text-sm font-medium hover:text-primary transition-colors">
-              {t('medicareBasics')}
-            </Link>
-            <Link to="/coverage-options" className="text-sm font-medium hover:text-primary transition-colors">
-              {t('coverageOptions')}
-            </Link>
-            <Link to="/enrollment-help" className="text-sm font-medium hover:text-primary transition-colors">
-              {t('enrollmentHelp')}
-            </Link>
-            <Link to="/resources" className="text-sm font-medium hover:text-primary transition-colors">
-              {t('resources')}
-            </Link>
           </div>
         </div>
       </div>
