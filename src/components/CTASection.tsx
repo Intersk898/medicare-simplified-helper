@@ -3,7 +3,7 @@ import { Phone } from "lucide-react";
 
 const CTASection = () => {
   return (
-    <section className="py-20 gradient-bg text-white">
+    <section className="py-20 bg-primary text-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6 animate-fade-up">
@@ -15,7 +15,7 @@ const CTASection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg"
-              variant="default"
+              variant="secondary"
               className="bg-white text-primary hover:bg-white/90 transition-all duration-300 hover:translate-y-[-2px] group"
             >
               Schedule Free Consultation
