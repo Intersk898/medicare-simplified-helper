@@ -86,7 +86,7 @@ const Navbar = () => {
 
               <Link 
                 to="/find-agent" 
-                className="flex items-center gap-1.5 text-sm font-medium text-gray-900 hover:text-primary transition-colors pt-1"
+                className="flex items-center gap-1.5 text-sm font-medium text-gray-900 hover:text-primary transition-colors"
               >
                 <UserSearch className="w-4 h-4" />
                 {t('findAgent')}
@@ -94,7 +94,7 @@ const Navbar = () => {
 
               <Link 
                 to="/careers" 
-                className="flex items-center gap-1.5 text-sm font-medium text-gray-900 hover:text-primary transition-colors pt-1"
+                className="flex items-center gap-1.5 text-sm font-medium text-gray-900 hover:text-primary transition-colors"
               >
                 <Briefcase className="w-4 h-4" />
                 {t('careers')}
@@ -103,7 +103,7 @@ const Navbar = () => {
           </div>
 
           {/* Bottom Row */}
-          <div className="flex items-center justify-between py-3">
+          <div className="flex items-center justify-between py-3 mt-4">
             <div className="w-32">
               {/* Spacer for logo */}
             </div>
@@ -137,7 +137,7 @@ const Navbar = () => {
               </Link>
             </div>
 
-            <div className="flex items-center gap-2 pl-4 border-l">
+            <div className="flex items-center gap-2 pl-4">
               <HelpCircle className="w-4 h-4 text-primary" />
               <div className="flex flex-col">
                 <span className="text-xs text-gray-600">Questions?</span>
