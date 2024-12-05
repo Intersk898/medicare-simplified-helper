@@ -5,7 +5,6 @@ import AgentHero from "@/components/agent/AgentHero";
 import AgentMap from "@/components/agent/AgentMap";
 import AgentForm from "@/components/agent/AgentForm";
 import FeaturedAgents from "@/components/agent/FeaturedAgents";
-import AgentTestimonials from "@/components/agent/AgentTestimonials";
 import Footer from "@/components/Footer";
 
 const FindAgent = () => {
@@ -70,7 +69,6 @@ const FindAgent = () => {
         <AgentHero />
         <AgentMap />
         <FeaturedAgents />
-        <AgentTestimonials />
         <AgentForm />
       </main>
       <Footer />
