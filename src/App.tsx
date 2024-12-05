@@ -10,6 +10,7 @@ import CoverageOptions from "./pages/CoverageOptions";
 import EnrollmentHelp from "./pages/EnrollmentHelp";
 import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
+import FindAgent from "./pages/FindAgent";
 import Accessibility from "./pages/Accessibility";
 import Privacy from "./pages/Privacy";
 import Disclaimer from "./pages/Disclaimer";
@@ -38,6 +39,7 @@ const App = () => {
             <Route path="/enrollment-help" element={<EnrollmentHelp />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/find-agent" element={<FindAgent />} />
             <Route path="/accessibility" element={<Accessibility />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
