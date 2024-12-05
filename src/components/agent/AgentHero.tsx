@@ -1,3 +1,5 @@
+import { MapPin } from "lucide-react";
+
 const AgentHero = () => {
   return (
     <section className="relative pt-32 pb-20 overflow-hidden">
@@ -5,7 +7,7 @@ const AgentHero = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-down">
-            Your Local Medicare Experts in Los Angeles County
+            Find Your Local Medicare Agent in Los Angeles County
           </h1>
           <p className="text-xl text-gray-600 mb-8 animate-fade-up">
             Connect with experienced Medicare specialists who understand your community's unique healthcare needs. Our agents live and work in your neighborhood, providing personalized guidance for your Medicare journey.
@@ -23,6 +25,10 @@ const AgentHero = () => {
             >
               Call (213) 322-3542
             </a>
+          </div>
+          <div className="mt-8 flex items-center justify-center gap-2 text-gray-600">
+            <MapPin className="w-6 h-6 text-primary" />
+            <span className="text-lg">Serving all communities in Los Angeles County</span>
           </div>
         </div>
       </div>

@@ -6,17 +6,17 @@ import { toast } from "sonner";
 const AgentForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thank you! An agent will contact you soon.");
+    toast.success("Thank you! A local Medicare specialist will contact you soon.");
   };
 
   return (
-    <section className="py-20">
+    <section className="py-20 bg-white" id="contact-form">
       <div className="container mx-auto px-4">
         <div className="max-w-xl mx-auto">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-4">Connect with a Local Agent</h2>
+            <h2 className="text-3xl font-bold mb-4">Connect with a Local Medicare Specialist</h2>
             <p className="text-gray-600">
-              Tell us about your Medicare needs, and we'll match you with an agent who specializes in your area.
+              Get personalized Medicare guidance from an agent who knows your neighborhood and local healthcare options.
             </p>
           </div>
           
@@ -32,11 +32,14 @@ const AgentForm = () => {
               placeholder="Tell us about your Medicare needs (optional)" 
               className="min-h-[100px]"
             />
+            <div className="text-sm text-gray-500 mb-4">
+              By submitting this form, you agree to be contacted by a licensed Medicare specialist from Mazari Health Insurance Services.
+            </div>
             <Button 
               type="submit" 
-              className="w-full bg-primary hover:bg-primary/90"
+              className="w-full bg-primary hover:bg-primary/90 text-lg py-6"
             >
-              Find My Local Agent
+              Find My Local Medicare Specialist
             </Button>
           </form>
         </div>
